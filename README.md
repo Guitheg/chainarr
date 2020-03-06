@@ -3,8 +3,11 @@
 
 Vous devez implémenter en OCAML un algorithme de démonstration en chaînage arrière utilisant
 une politique premier but, première règle. Il devra respecter le cycle de base d'un moteur
-d'inférences : (1) détection des règles applicables, (2) choix de la règle à appliquer (résolution de
-conflits), (3) application de cette règle, (4) marquage de la règle utilisée. Et ceci tant que la liste des
+d'inférences : 
+ (1) détection des règles applicables, 
+ (2) choix de la règle à appliquer (résolution de conflits), 
+ (3) application de cette règle, 
+ (4) marquage de la règle utilisée. Et ceci tant que la liste des
 buts n’est pas vide et qu’il reste des règles à appliquer.
 Une règle ne pourra être utilisée que pour démontrer un fait qui n'est pas déjà dans BF. Tout fait
 démontré devra être rajouté à la base de faits BF (voir l'exemple de session de la page précédente).
