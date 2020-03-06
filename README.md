@@ -1,6 +1,6 @@
 # Moteur d'inférences d'ordre 0 en chaînage arrière  
  
-Vous devez implémenter en OCAML un algorithme de démonstration en chaînage arrière utilisant
+Implémentation en OCAML d'un algorithme de démonstration en chaînage arrière utilisant
 une politique premier but, première règle. Il devra respecter le cycle de base d'un moteur
 d'inférences :  
  (1) détection des règles applicables,  
