@@ -1,6 +1,5 @@
-# chainarr
- Moteur d'inférences d'ordre 0 en chaînage arrière
-
+# Moteur d'inférences d'ordre 0 en chaînage arrière  
+ 
 Vous devez implémenter en OCAML un algorithme de démonstration en chaînage arrière utilisant
 une politique premier but, première règle. Il devra respecter le cycle de base d'un moteur
 d'inférences :  
