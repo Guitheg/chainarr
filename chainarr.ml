@@ -34,15 +34,16 @@ let printetatn buts =
   printsn "buts : ";
   prlistn buts;;
 
-
-
-
-let a,b,c,d,e = "a","b","c","d","e";;
+let a, b, c, d, e, f, g, h = "a","b","c","d","e","f","g","h";;
 let bf1 = [a;b];;
 let br1 = [
-            [a;b],c;
+            [a;b],h;
+            [a;c],e;
             [a;d],e;
-            [a;c],e
+            [f;g],e;
+            [a;d],f;
+            [a;h],f;
+            [a;b],g
           ];;
 
   (* let br1 = function
@@ -71,7 +72,8 @@ let rec chainarr buts br bf nodes backtrack =
         match step with
           | [] -> ( match backtrack with
                       | [] -> (false, nodes, backtrack)
-                      | btk :: sbtk -> (chainarr btk br bf nodes sbtk))
+                      | btk :: sbtk -> 
+                        chainarr (btk@suitebuts) br bf nodes sbtk)
           | si :: suitebtk -> chainarr (si@suitebuts) br bf nodes suitebtk) ;;
 
 chainarr but1 br1 bf1 [] [];;     
