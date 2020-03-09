@@ -102,21 +102,21 @@ let rec chainarr
     | [] -> (true, backtrack, bf)
     | conjonction :: suitebuts -> (
       match conjonction with
-        | [] -> chainarr suitebuts br ((top proved)::bf) backtrack (pop proved)
-        | b :: conjonction -> (
-          if is_a_fact bf b then chainarr (conjonction::suitebuts) br bf backtrack proved
-          else (
-            let step = apply_br br b in
-              match step with
-                | [] -> ( match backtrack with
-                            | [] -> (false, backtrack, bf)
-                            | btk :: sbtk -> 
-                              match conjonction with
-                                | [] -> chainarr (btk::suitebuts) br bf sbtk proved
-                                | c -> chainarr (btk::c::suitebuts) br bf sbtk proved)
-                | si :: suitebtk ->
-                  match conjonction with
-                    | [] -> chainarr (si::suitebuts) br bf (suitebtk@backtrack) (b::proved)
-                  | c -> chainarr (si::c::suitebuts) br bf (suitebtk@backtrack) (b::proved)))) ;;
+      | [] -> chainarr suitebuts br ((top proved)::bf) backtrack (pop proved)
+      | b :: conjonction -> (
+        if is_a_fact bf b then chainarr (conjonction::suitebuts) br bf backtrack proved
+        else (
+          let step = apply_br br b in
+            match step with
+            | [] -> ( match backtrack with
+                      | [] -> (false, backtrack, bf)
+                      | btk :: sbtk -> 
+                        match conjonction with
+                        | [] -> chainarr (btk::suitebuts) br bf sbtk proved
+                        | c -> chainarr (btk::c::suitebuts) br bf sbtk proved)
+            | si :: suitebtk ->
+              match conjonction with
+              | [] -> chainarr (si::suitebuts) br bf (suitebtk@backtrack) (b::proved)
+              | c -> chainarr (si::c::suitebuts) br bf (suitebtk@backtrack) (b::proved)))) ;;
 
 chainarr but1 br1 bf1 [] [];;
