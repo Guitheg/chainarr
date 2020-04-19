@@ -1,0 +1,114 @@
+let a, b, c, d, e, f, g, h = "a","b","c","d","e","f","g","h";;
+let bf1 = [a;b];;
+let br1 = [
+            [a;b],h;
+            [a;c],e;
+            [a;h],e;
+            [h;d],f;
+            [h;a],f;
+            
+          ];;
+let but1 = [[f]];;
+
+
+let c = "Type C (Carbonné)";;
+let b = "Type B";;
+let f = "Type F";;
+let g = "Type G";;
+let s = "Type S (Silice)";;
+let a = "Type A";;
+let k = "Type K";;
+let l = "Type L";;
+let q = "Type Q";;
+let r = "Type R";;
+let m = "Type M (Metallique)";;
+let x = "Type X";;
+let e = "Type E";;
+let p = "Type P";;
+let v = "Type V";;
+let mgSiO3 = "Enstatie (MgSiO3)";;
+let achondrite = "Surface Achondrite";;
+let carbonne = "Carbonne";;
+let sombre = "Sombre";;
+let brillant = "Brillant";;
+let _003 = "Albédo de 0.03 ou moins";;
+let _N003 = "L'albédo est plus claire que 0.03";;
+let _004_008 = "Albedo de 0.04 a 0.08";;
+let _010_022 = "Aldebo de 0.10 a 0.22";;
+let sil_Anh = "Silicates anhydres";;
+let arg_hyd = "Mineraux argileux hydrates";;
+let _arg_hyd = "Sans Mineraux argileux hydrates";;
+let pol_org = "Polymeres organiques";;
+let magn = "Magnetite";;
+let sulf = "Sulfures";;
+let spectre_07 = "Spectre en dessous de 0.7 um"
+let spectre_05 = "Spectre en dessous de 0.5 um";;
+let spectre_04 = "Spectre en dessous de 0.4 um";;
+let argile = "Argile";;
+let mica = "Mica";;
+let phyllosilic = "Phyllosilicates";;
+let silic = "Silicates";;
+let silic_Fer = "Silicates de fer";;
+let magnesium = "Magnesium";;
+let olivine = "Olivine";;
+let pyro = "Pyroxene";;
+let _pyro = "Sans Pyroxene";;
+let metaux = "Métaux";;
+let _metaux = "Sans Metaux"
+let chondrites = "Chondrites ordinaires pierreuse et ferreuses";;
+let _chondrites = "Sans Chondrites ordinaires pierreuse et ferreuses";;
+let nickel = "Nickel";;
+let fer = "Fer";;
+let minable = "Minable";;
+let _minable = "Non minable";;
+
+let br_asteroide = [
+  [carbonne], c;
+  [c; _004_008; sil_Anh; arg_hyd; pol_org; magn; sulf], b;
+  [argile; mica], phyllosilic;
+  [c; spectre_05], g;
+  [c; phyllosilic], g;
+  [c; _004_008; sil_Anh; _arg_hyd; pol_org; magn; sulf; spectre_04], f;
+  [silic], s;
+  [silic_Fer], silic;
+  [silic; magnesium], s;
+  [_003], sombre;
+  [_004_008], sombre;
+  [_010_022], brillant;
+  [fer], metaux;
+  [nickel], metaux;
+  [s; spectre_07; _003], k;
+  [s; spectre_07; _N003], l;
+  [s; olivine; pyro; metaux; spectre_07], q;
+  [s; olivine; _pyro; _metaux; spectre_07], a;
+  [s; brillant; _chondrites], r;
+  [s; brillant; chondrites], v;
+  [metaux; brillant], m;
+  [mgSiO3; achondrite], e;
+  [sombre; silic; carbonne], p;
+  [m], x;
+  [e], x;
+  [p], x;
+  [e], _minable;
+  [p], _minable;
+  [m], minable;
+  [b], minable;
+  [q], _minable;
+  [a], _minable;
+  [r], _minable;
+  [v], _minable;
+  [s], _minable;
+  [g], minable;
+  [f], minable;
+];;
+
+let asteroide_detecte_1 = [_004_008; olivine; pyro; silic; carbonne];;
+let asteroide_detecte_2 = [carbonne; _004_008; magn; phyllosilic];; (*Astéroide Bénou*)
+let asteroid_detecte_3 = [_010_022; nickel; fer];;
+let is_asteroide_minable = [[minable]];;
+let is_asteroide_non_minable = [[_minable]];;
+let type_asteroide_a = [[a]];;
+let type_asteroide_b = [[b]];;
+let type_asteroide_g = [[g]];;
+let type_asteroide_p = [[p]];;
+let type_asteroide_m = [[m]];;
